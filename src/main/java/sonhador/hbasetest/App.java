@@ -33,13 +33,12 @@ import org.apache.hadoop.mapreduce.task.TaskAttemptContextImpl;
  */
 public class App {
     public static void main(String []args) throws IOException, InterruptedException {
-//        if (args.length != 1) {
-//            System.err.println("Correct Usage: <repetitions>");
-//            System.exit(1);
-//        }
+        if (args.length != 1) {
+            System.err.println("Correct Usage: <repetitions>");
+            System.exit(1);
+        }
         
-//        new App(Integer.parseInt(args[0]));
-        new App(10);
+        new App(Integer.parseInt(args[0]));
     }
     
     public App(int repetitions) throws IOException, InterruptedException {
