@@ -106,8 +106,16 @@ public class Main2 {
             
             put.add(cell);
             puts.add(put);
+            
+            if (i % 100 == 0) {
+                bmpHTable.put(puts);
+                puts = new ArrayList<>();
+            }
         }
-        bmpHTable.put(puts);
+        
+        if (puts.size() > 0) {
+            bmpHTable.put(puts);
+        }
         bmpHTable.close();
         conn.close();
     }
