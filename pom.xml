@@ -38,7 +38,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>sonhador.hbasetest.Main</mainClass>
+                            <mainClass>sonhador.hbasetest.Main2</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

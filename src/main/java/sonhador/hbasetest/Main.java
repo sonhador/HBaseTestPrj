@@ -101,6 +101,7 @@ public class Main {
         for (int i=0; i<repetitions; i++) {
             byte[] row = Bytes.toBytes(i);
             Put put = new Put(row);
+            
             for (int w=0; w<image.getWidth(); w++) {
                 int wZeroPadding = wWidth - String.format("%d", w).length();
                 for (int h=0; h<image.getHeight(); h++) {
