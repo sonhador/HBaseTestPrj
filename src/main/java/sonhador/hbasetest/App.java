@@ -81,6 +81,7 @@ public class App {
         conf.setLong("hbase.mapreduce.hfileoutputformat.blocksize", 1048576*500);
         conf.set("hbase.mapreduce.hfileoutputformat.table.name", rgbTable.getNameAsString());
         conf.set("hbase.mapreduce.hfileoutputformat.compression", "gzip");
+        conf.set("hbase.hfileoutputformat.families.compression", "gzip");
         
         HFileOutputFormat2 outputFormat = new HFileOutputFormat2();
         TaskAttemptContext ctx = new TaskAttemptContextImpl(conf, new TaskAttemptID(new TaskID(new JobID("test", 1), TaskType.REDUCE, 1), 1));
