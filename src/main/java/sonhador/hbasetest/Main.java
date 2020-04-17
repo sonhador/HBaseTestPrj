@@ -91,7 +91,7 @@ public class Main {
         
         System.out.println("Table conn ok..");
         
-        BufferedImage image = ImageIO.read(getClass().getResourceAsStream("/accord_house.bmp"));
+        BufferedImage image = ImageIO.read(getClass().getResourceAsStream("/white.bmp"));
         CellBuilder cellBuilder = CellBuilderFactory.create(CellBuilderType.DEEP_COPY);
         
         int wWidth = String.format("%d", image.getWidth()).length();
