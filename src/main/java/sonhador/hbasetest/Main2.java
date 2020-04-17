@@ -105,8 +105,9 @@ public class Main2 {
                                              buf.toByteArray());
             
             put.add(cell);
-            bmpHTable.put(puts);
+            puts.add(put);
         }
+        bmpHTable.put(puts);
         bmpHTable.close();
         conn.close();
     }
