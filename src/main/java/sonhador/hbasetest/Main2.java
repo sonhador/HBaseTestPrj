@@ -92,9 +92,10 @@ public class Main2 {
             byte[] row = Bytes.toBytes(i);
             Put put = new Put(row);
             
+            System.out.println(i);
+            
             ByteArrayOutputStream buf = new ByteArrayOutputStream();
             ImageIO.write(image, "bmp", buf);
-            buf.flush();
             
             Cell cell = CellUtil.createCell(row, 
                                              dataFamily.getBytes(), 
@@ -103,7 +104,6 @@ public class Main2 {
                                              (byte)4,
                                              buf.toByteArray());
             
-            buf.close();
             put.add(cell);
             bmpHTable.put(puts);
         }
