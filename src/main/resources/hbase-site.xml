@@ -28,4 +28,30 @@
         <name>hbase.zookeeper.property.dataDir</name>
         <value>/home/gpadmin/hbase/zookeeper</value>
     </property>
+
+    <property>
+        <name>hbase.procedure.store.wal.use.hsync</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>hbase.unsafe.stream.capability.enforce</name>
+        <value>false</value>
+    </property>
+
+
+    <property>
+        <name>hbase.wal.dir</name>
+        <value>hdfs://localhost:8020/tmp/WALs</value>
+    </property>
+
+    <property>
+        <name>hbase.wal.provider</name>
+        <value>filesystem</value>
+    </property>
+
+    <property>
+        <name>hbase.ipc.max.request.size</name>
+        <value>1048576000</value>
+    </property>
 </configuration>
