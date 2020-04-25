@@ -6,20 +6,22 @@
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
     
     <dependencies>
         <dependency>
             <groupId>org.apache.hbase</groupId>
             <artifactId>hbase-client</artifactId>
-            <version>2.2.4</version>
+            <version>0.98.24-hadoop2</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.hbase</groupId>
-            <artifactId>hbase-mapreduce</artifactId>
-            <version>2.2.4</version>
+            <groupId>jdk.tools</groupId>
+            <artifactId>jdk.tools</artifactId>
+            <version>1.6</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/tools.jar</systemPath>
         </dependency>
     </dependencies>
     
@@ -33,7 +35,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>sonhador.hbasetest.Main2</mainClass>
+                            <mainClass>sonhador.hbasetest.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
